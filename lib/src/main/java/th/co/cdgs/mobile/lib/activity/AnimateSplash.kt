@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import com.daimajia.androidanimations.library.YoYo
 import com.nineoldandroids.animation.Animator
 import io.codetail.animation.SupportAnimator
@@ -15,7 +14,7 @@ import th.co.cdgs.mobile.lib.models.ConfigSplash
 import th.co.cdgs.mobile.lib.utils.UIUtils
 import th.co.cdgs.mobile.lib.utils.then
 
-abstract class AwesomeSplash : AppCompatActivity() {
+abstract class AnimateSplash : AppCompatActivity() {
     private var mConfigSplash: ConfigSplash? = null
     private var hasAnimationStarted = false
 
