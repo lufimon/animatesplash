@@ -1,9 +1,9 @@
 package th.co.cdgs.mobile.splashanimate
 
-import th.co.cdgs.mobile.lib.activity.AwesomeSplash
+import th.co.cdgs.mobile.lib.activity.AnimateSplash
 import th.co.cdgs.mobile.lib.models.ConfigSplash
 
-class MainActivity : AwesomeSplash() {
+class MainActivity : AnimateSplash() {
 
     override fun initSplash(configSplash: ConfigSplash?) {
 

@@ -73,12 +73,27 @@ abstract class AnimateSplash : AppCompatActivity() {
             .withListener(object : Animator.AnimatorListener {
                 override fun onAnimationStart(animation: Animator) {}
                 override fun onAnimationEnd(animation: Animator) {
-                    startTextAnimation()
+                    startTextVersionAnimation()
                 }
 
                 override fun onAnimationCancel(animation: Animator) {}
                 override fun onAnimationRepeat(animation: Animator) {}
             }).duration(mConfigSplash?.animLogoSplashDuration?.toLong() ?: 0).playOn(imgLogo)
+    }
+
+    fun startTextVersionAnimation() {
+        txtVersion.visibility = View.VISIBLE
+        txtVersion.text = mConfigSplash?.versionSplash
+        YoYo.with(mConfigSplash?.animVersionTechnique)
+            .withListener(object : Animator.AnimatorListener {
+                override fun onAnimationRepeat(animation: Animator?) {}
+                override fun onAnimationEnd(animation: Animator?) {
+                    startTextAnimation()
+                }
+
+                override fun onAnimationCancel(animation: Animator?) {}
+                override fun onAnimationStart(animation: Animator?) {}
+            }).duration(mConfigSplash?.animVersionDuration?.toLong() ?: 0).playOn(txtVersion)
     }
 
     fun startTextAnimation() {

@@ -10,10 +10,13 @@ object Defaults {
 
     const val EMPTY = ""
 
-    const val TEXT_SIZE = 20f
+    const val TEXT_SIZE = 18f
     const val ORIGINAL_HEIGHT = 400
     const val ORIGINAL_WIDTH = 400
     const val STROKE_WIDTH = 2
 
     const val APP_TITLE = "กำลังตรวจสอบอัพเดต"
+
+    const val VERSION_TITLE = "เวอร์ชั่น"
+    const val VERSION_SIZE = 14f
 }

@@ -38,6 +38,14 @@ class ConfigSplash : Serializable {
     var animSpinDuration = 0
     var animSpinTechnique: Techniques? = null
 
+    //TextVersion
+    var versionSplash: String? = null
+    var versionFont: String? = null
+    var animVersionDuration = 0
+    var animVersionTechnique: Techniques? = null
+    var versionTextSize = 0f
+    var versionTextColor = 0
+
     init {
         animCircularRevealDuration = Defaults.ANIM_REVEAL
         revealFlagX = Flags.CENTER_HORIZOTAL
@@ -66,5 +74,12 @@ class ConfigSplash : Serializable {
         //Spin
         animSpinDuration = Defaults.ANIM_SPIN
         animSpinTechnique = Techniques.FadeInDown
+        //TextVersion
+        versionSplash = Defaults.VERSION_TITLE
+        animVersionDuration = Defaults.ANIM_TEXT
+        animVersionTechnique = Techniques.FadeInDown
+        versionTextSize = Defaults.VERSION_SIZE
+        versionTextColor = R.color.white
+        versionFont = Defaults.EMPTY
     }
 }
